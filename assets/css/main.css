@@ -1,0 +1,305 @@
+/*
+
+Main CSS File
+
+*/
+
+/* Fonts */
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/ApercuProRegular.ttf");
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/ApercuProBold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Apercu";
+  src: url("../fonts/ApercuProLight.ttf");
+  font-style: lighter;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(22,24,39);
+  font-family: 'Apercu', sans-serif;
+  overflow: hidden;
+  color: #a9a9a9;
+}
+
+h1{
+  font-weight: bolder;
+  font-style: bold;
+}
+
+h5{
+  font-weight: lighter;
+  display: inline-block;;
+  font-family: 'Apercu', sans-serif;
+}
+
+h3{
+  font-size:13px;
+  line-height: 1.8;
+}
+
+a{
+  color:#ececec;
+  text-decoration: none;
+}
+
+#map{
+  position: absolute;
+  top:0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  z-index: -99;
+  background-color: rgb(22,24,39);
+}
+
+#controllers{
+  position: absolute;
+  left: 1%;
+  bottom: 2.3em;
+  text-align: left;
+}
+
+#speed{
+  margin-gm: 20px;
+  margin-bottom: 10px;
+  transform: rotateY(180deg);
+}
+
+.action{
+  background-color: #f3f0f0;
+  display: inline-block;
+  padding: 1px 3px;
+  color: #020202;
+  border: none;
+  margin: 5px;
+}
+
+#producto{
+  margin-top: 6em;
+  display: inline-block;
+  padding: 4px;
+  color:black;
+}
+
+#monto_total{
+  padding: 3px;
+  color:black;
+}
+
+#description{
+  margin-top: 6em;
+  display: inline-block;
+  padding: 4px;
+  color:#a9a9a9;
+}
+
+#nothing{
+  margin-top: 6em;
+  display: inline-block;
+  padding: 4px;
+  color:#a9a9a9;
+}
+
+#title{
+  position: absolute;
+  right: 0;
+  border-bottom: 6px solid #a9a9a9;
+  max-width: 210px;
+}
+
+#subtitle{
+  position: absolute;
+  right: 0;
+  top: 9em;
+  text-align: justify;
+  text-align-last: right;
+}
+
+#subtitleDescription{
+  padding: 0;
+}
+
+#legends{
+  text-align-last: center;
+}
+
+#legend_institucion{
+  max-width: 80px;
+  margin-left: 8px;
+}
+
+#legend_empresa{
+  max-width: 80px;
+}
+
+#logo{
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+  text-align: center;
+}
+
+#logo>img{
+  max-width: 150px;
+}
+
+#credits{
+  bottom: 0.1em;
+  font-size: 11px;
+  padding: 0;
+  position: absolute;
+  padding: 4px;
+  left: 1.5%
+}
+
+.institucion{
+  /*background-color: rgb(6,80,183);*/
+  background-color: rgb(220,76,100);
+  padding: 2px;
+  color: #e6e6e6;
+}
+
+.empresa{
+  /*background-color: rgb(182,22,25);*/
+  background-color: rgb(125,187,99);
+  padding: 2px;
+  color: #e6e6e6;
+}
+
+.moveableText{
+  position: absolute;
+  font-size: 11px;
+  left:100000px; /* Start off-screen */
+}
+
+.comuna{
+  font-size: 9px;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 0.8;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    background-image: inherit;
+}
+
+.clip-text_one {
+  /*background-image: url('../imgs/title_background.jpg');*/
+  background-color: #ececec;
+}
+
+:focus {
+    outline: none;
+}
+
+/* Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 80%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 80%%;
+  height: 4.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #f3f0f0;
+  border-radius: 1.3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 26px;
+  width: 10px;
+  border-radius: 3px;
+  background: #108188;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #f3f0f0;
+}
+input[type=range]::-moz-range-track {
+  width: 80%;
+  height: 4.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #f3f0f0;
+  border-radius: 1.3px;
+}
+input[type=range]::-moz-range-thumb {
+  height: 26px;
+  width: 10px;
+  border-radius: 3px;
+  background: #f3f0f0;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #f3f0f0;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #f3f0f0;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  height: 26px;
+  width: 10px;
+  border-radius: 3px;
+  background: #f3f0f0;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #f3f0f0;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #f3f0f0;
+}
+
+select#convenios,
+select#regiones,
+select#convenios-color {
+  color: #2f2f2f;
+  margin: 5px;
+  padding: 4px 10px;
+}
+select#convenios-color,
+select#regiones-color{
+  color: #fff;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#779126, #779126 40%, #779126);
+  background-color: #779126;
+  padding-left: 15px;
+}
+
+select, option { max-width: 140px; }

@@ -1,0 +1,23 @@
+{
+  "name": "ChileCompra",
+  "authors": [
+    "Cristobal Valenzuela <cvalenzuela@nyu.edu>"
+  ],
+  "description": "Data Visualization for ChileCompra",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "animate.css": "animate-css#^3.5.2",
+    "paper": "^0.10.2"
+  }
+}
