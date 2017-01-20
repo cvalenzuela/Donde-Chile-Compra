@@ -1,4 +1,6 @@
-# Where does Chile Buys?
+# Donde Chile Compra
+
+Where does Chile Buys?
 
 Visualizing all Chilean Government Purchases: Who, what and where it buys?
 
