@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="description" content="Donde Chile Compra, una visualización sobre las compras de Chile bajo el Convenio Marco">
+    <meta name="author" content="Cristóbal Valenzuela Barrera">
+    
+    <title>Donde Chile Compra - Visualización</title>
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <!-- Mapbox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+  </head>
+
+  <body>
+  <div class="container">
+
+    <!-- Title -->
+    <div class="row">
+      <div class="col-xs-6 col-md-3" id="title">
+        <h1 class="clip-text clip-text_one text-right" >DONDE<br/>CHILE<br/>COMPRA</h1>
+      </div>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="row">
+      <div class="col-xs-5 col-md-3" id="subtitle">
+        <h3 class="col-md-12" id="subtitleDescription">Esta Visualización muestra las transacciones registradas de convenio marco durante noviembre 2016 entre compradores y proveedores del Estado. Los valores están en pesos y corresponden a productos y/o servicios transados en <a href="http://datosabiertos.chilecompra.cl/dataviews/231291/transacciones-de-convenio-marco-julio-2016/">mercadopublico.cl</a>
+        </h3>
+        <div class="col-md-12">
+          <div class="row" id="legends">
+            <h6 class="col-lg-4 pull-right institucion" id="legend_institucion">Compradores</h6>
+            <h6 class="col-lg-4 pull-right empresa" id="legend_empresa">Proveedores</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="row">
+      <div class="col-xs-8 col-md-4" id="controllers">
+        <div class="row">
+          <select id="convenios" class="col-xs-6">
+            <option value="todos">Convenio Marco - Ver Todos</option>
+          </select>
+          <select id="regiones" class="col-xs-6">
+            <option value="todas">Regiones Proveedor - Ver Todas</option>
+          </select>
+        </div>
+        <div class="row">
+          <input onclick="showAll()" type="button" value="Ver" id="show_all" class="action col-xs-3 col-md-3"/>
+          <input onclick="start()" type="button" value="Animar" id="start_stop" class="action col-xs-3 col-md-3"/>
+          <input onclick="cleanAll()" type="button" value="Borrar" id="start_stop" class="action col-xs-3 col-md-3"/>
+        </div>
+        <div class="row">
+          <input type="range" id="speed" value="7" min="3" max="9" step="1" class="col-xs-6">
+        </div>
+        <div class="row">
+          <p style="padding:0;" class="col-xs-1">-</p>
+          <p class="col-xs-8 text-center">Velocidad Animación</p>
+          <p class="col-xs-1">+</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credits -->
+    <p class="legend" id="credits">Made by <a href="http://cvalenzuelab.com">Cristóbal Valenzuela</a></p>
+
+    <!-- Movable Text -->
+    <p class="institucion moveableText animated" id="institucion"></p>
+    <p class="institucion moveableText comuna animated" id="comuna_institucion"></p>
+    <p class="empresa moveableText animated" id="empresa"</p>
+    <p class="empresa moveableText comuna animated" id="comuna_empresa"></p>
+
+    <!-- Producto y Monto for Animation sequence -->
+    <div class="row">
+      <h5 class="col-xs-4 col-xs-offset-4 text-center animated" id="producto"></h5>
+    </div>
+    <div class="row">
+      <h5 class="col-xs-2 col-xs-offset-5 text-center animated" id="monto_total"></h5>
+    </div>
+
+    <!-- Description for Total View-->
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4 text-center animated" id="nothing" style="display:none;">
+        <h5>No hay compras para esta selección</h5>
+      </div>
+      <div class="col-xs-4 col-xs-offset-4 text-center animated" id="description" style="display:none;">
+        <h5 id="instituciones_del_estado"><span class="institucion">Las instituciones del Estado</span> hicieron </h5>
+        <h5 id="amount"></h5>
+        <h5 id="compras"></h5>
+        <h5 id="convenios_de_chile"></h5>
+        <h5 id="empresas_de_chile" class="empresa"></h5>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="row" id="logo">
+      <img src="assets/imgs/logo_chileCompraWhite.png" />
+    </div>
+
+  </div>
+
+
+  <!-- Map -->
+  <div id='map'></div>
+
+  <!-- JS Files -->
+  <script src="assets/js/select.js"></script>
+  <script src="assets/js/mapbox.js"></script>
+  <script src="assets/js/index.js"></script>
+
+  </body>
+</html>

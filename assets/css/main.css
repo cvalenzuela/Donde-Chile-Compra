@@ -27,7 +27,7 @@ body{
   background-color: rgb(22,24,39);
   font-family: 'Apercu', sans-serif;
   overflow: hidden;
-  color: #a9a9a9;
+  color: #e0e0e0;
 }
 
 h1{
@@ -99,20 +99,20 @@ a{
   margin-top: 6em;
   display: inline-block;
   padding: 4px;
-  color:#a9a9a9;
+  color:#e0e0e0;
 }
 
 #nothing{
   margin-top: 6em;
   display: inline-block;
   padding: 4px;
-  color:#a9a9a9;
+  color:#e0e0e0;
 }
 
 #title{
   position: absolute;
   right: 0;
-  border-bottom: 6px solid #a9a9a9;
+  border-bottom: 2px solid #e0e0e0;
   max-width: 210px;
 }
 
@@ -122,6 +122,18 @@ a{
   top: 9em;
   text-align: justify;
   text-align-last: right;
+}
+
+#title_index{
+  margin-top: 10vh;
+  border-bottom: 2px solid #e0e0e0;
+  display: inline-block;
+  color:#e0e0e0;
+}
+
+#subtitle_index{
+  text-align: justify;
+  color:#e0e0e0;
 }
 
 #subtitleDescription{
@@ -303,3 +315,26 @@ select#regiones-color{
 }
 
 select, option { max-width: 140px; }
+
+#home{
+  background: linear-gradient( to bottom,
+    rgba(0,0,0,0),
+    rgba(0,0,0,.65)),
+    url(../imgs/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#seemore{
+  background: transparent;
+  border: 1px solid white;
+  padding: 12px;
+  margin-top: 3vh;
+}
+
+a:focus, a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
