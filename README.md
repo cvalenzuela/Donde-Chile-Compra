@@ -16,7 +16,7 @@ Using:
 
 ## Live
 
-This project site is in Spanish.
+This site is in Spanish.
 
 [Donde Chile Compra](http://dondechilecompra.cvalenzuelab.com/)
 
