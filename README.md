@@ -2,7 +2,7 @@
 
 ##### Where does Chile Buys?
 
-![web](https://cloud.githubusercontent.com/assets/10605821/22319555/d7fc2c46-e351-11e6-9e1a-1d27e2fb5638.jpg)
+![web](https://cloud.githubusercontent.com/assets/10605821/22319653/bb1df4fa-e352-11e6-80c0-92140a55f1e6.jpg)
 
 ###### English
 
